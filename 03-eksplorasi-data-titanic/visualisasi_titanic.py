@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import matplotlib.gridspec as gridspec
 
 # ── 1. MEMBACA DATASET ─────────────────────────────────────────────
-jalur_file = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'titanic.csv')
+jalur_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'titanic.csv')
 df = pd.read_csv(jalur_file)
 
 # ── 2. PALET WARNA PROFESIONAL & ELEGAN ─────────────────────────────

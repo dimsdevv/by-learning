@@ -7,6 +7,7 @@ Membangun model Machine Learning untuk memprediksi harga rata-rata labu
 berdasarkan waktu panen (hari dalam setahun).
 """
 
+import os
 import pandas as pd
 import matplotlib.pyplot as plt
 from sklearn.linear_model import LinearRegression
@@ -17,8 +18,9 @@ print("=" * 60)
 print("1. MEMBACA DAN MEMERIKSA DATASET")
 print("=" * 60)
 
-# Membaca data mentah
-df = pd.read_csv('data/US-pumpkins.csv')
+# Membaca data mentah secara dinamis
+data_path = os.path.join(os.path.dirname(__file__), '..', 'data', 'US-pumpkins.csv')
+df = pd.read_csv(data_path)
 print(f"Total baris data awal: {len(df)} baris")
 
 # -------------------------------------------------------------
@@ -115,8 +117,8 @@ plt.ylabel('Harga Labu ($ per Bushel)', fontsize=10)
 plt.legend()
 plt.grid(True, linestyle='--', alpha=0.6)
 
-# Simpan grafik ke dalam file gambar
-grafik_path = 'grafik_prediksi_labu.png'
+# Simpan grafik ke dalam file gambar secara dinamis
+grafik_path = os.path.join(os.path.dirname(__file__), 'grafik_prediksi_labu.png')
 plt.savefig(grafik_path, dpi=150, bbox_inches='tight')
 print(f"\nGrafik hasil visualisasi berhasil disimpan sebagai: '{grafik_path}'")
 print("=" * 60)

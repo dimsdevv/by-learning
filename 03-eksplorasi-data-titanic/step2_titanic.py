@@ -2,7 +2,7 @@ import pandas as pd
 import os
 
 # Membaca data menggunakan jalur file yang aman
-jalur_file = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'titanic.csv')
+jalur_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'titanic.csv')
 df = pd.read_csv(jalur_file)
 
 print("=" * 60)

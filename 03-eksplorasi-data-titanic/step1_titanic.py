@@ -6,7 +6,7 @@ print("="*60)
 
 # MEMBACA FILE DATA CSV (Menggunakan jalur relatif yang aman)
 import os
-jalur_file = os.path.join(os.path.dirname(__file__), '..', '..', 'data', 'titanic.csv')
+jalur_file = os.path.join(os.path.dirname(__file__), '..', 'data', 'titanic.csv')
 df = pd.read_csv(jalur_file)
 
 # Melihat jumlah baris dan kolom
